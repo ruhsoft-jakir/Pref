@@ -42,8 +42,6 @@ public class Pref {
         return  preferences.getFloat(key,1);
     }
 
-
-
     public static void setiValue(int data, String key, Context context){
         SharedPreferences.Editor editor = context.getSharedPreferences(key,Context.MODE_PRIVATE).edit();
         editor.putInt(key,data);
