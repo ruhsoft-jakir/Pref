@@ -19,6 +19,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Pref_SharedPreferences"
+rootProject.name = "Pref"
 include ':pref'
-include ':app'
