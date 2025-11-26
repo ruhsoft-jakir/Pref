@@ -84,6 +84,15 @@ public class Pref {
 
 
 
+   public static void setTheme_custom(String key,int data, Context context) {
+        SharedPreferences.Editor editor = context.getSharedPreferences("ThemePrefs_custom", Context.MODE_PRIVATE).edit();
+        editor.putInt(key, data);
+        editor.apply();
+    }
+    public static int getTheme_custom(String key,Context context) {
+        SharedPreferences preferences = context.getSharedPreferences("ThemePrefs_custom", Context.MODE_PRIVATE);
+        return preferences.getInt(key, AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM);
+    }
 
     public static void setString(String key,String data, Context context){
         SharedPreferences.Editor editor = context.getSharedPreferences(key,Context.MODE_PRIVATE).edit();
