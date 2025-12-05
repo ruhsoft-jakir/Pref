@@ -3,6 +3,7 @@ package com.jakir.pref;
 //
 // Created by JAKIR HOSSAIN on 8/5/2025.
 // Modified on 30/11/2025.
+// Modified on 05/12/2025.
 //
 
 
@@ -128,5 +129,27 @@ public class Pref {
     public static int getTheme_2(String key, Context context, int defValue) { //   MODE_NIGHT_FOLLOW_SYSTEM = -1; MODE_NIGHT_NO = 1; MODE_NIGHT_YES = 2;
         SharedPreferences preferences = context.getSharedPreferences("ThemePrefs_custom", Context.MODE_PRIVATE);
         return preferences.getInt(key, defValue);
+    }
+
+    /**
+     * SharedPreferences থেকে একটি নির্দিষ্ট কী (key) এবং তার ভ্যালু মুছে ফেলে।
+      * @param key যে কী-টি মুছে ফেলতে হবে।
+     * @param context Context অবজেক্ট।
+     */
+    public static void remove( String key, Context context) {
+        SharedPreferences.Editor editor = context.getSharedPreferences(key, Context.MODE_PRIVATE).edit();
+        editor.remove(key);
+        editor.apply();
+    }
+
+    /**
+     * একটি নির্দিষ্ট SharedPreferences ফাইলের সমস্ত ডেটা মুছে ফেলে।
+     * @param prefName SharedPreferences ফাইলের নাম।
+     * @param context Context অবজেক্ট।
+     */
+    public static void clear(String prefName, Context context) {
+        SharedPreferences.Editor editor = context.getSharedPreferences(prefName, Context.MODE_PRIVATE).edit();
+        editor.clear();
+        editor.apply();
     }
 }
