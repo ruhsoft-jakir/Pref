@@ -1,3 +1,3 @@
-	        implementation 'com.github.alphatech-apps:Pref:Tag'
+	        implementation 'com.github.ruhsoft-jakir:Pref:Tag'
 
-[![](https://jitpack.io/v/alphatech-apps/Pref.svg)](https://jitpack.io/#alphatech-apps/Pref)
+[![](https://jitpack.io/v/ruhsoft-jakir/Pref.svg)](https://jitpack.io/#ruhsoft-jakir/Pref)
